@@ -10,13 +10,16 @@ body{
 }
 main{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 
 }
 .container{
     background-color: #ffffff;
     width: 870px;
     padding: 30px;
+    border-radius: 5px;
+    margin-top: 21px;
 }
 hr{
     border: 1px solid #D1D1D1;
@@ -82,3 +85,85 @@ hr{
     color: #562EFF;
 
 }
+/*------ Courses styles------ */
+.courses{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 24px;
+}
+.course .course-banner img{
+    width: 204px;
+    height: 105;
+}
+.course-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.fa-star{
+    font-size: 12px;
+}
+.fa-star.filled{
+    color: #ffc014;
+
+}
+.fa-star.empty{
+    color:  #AEAEAE;
+    opacity: 25%;
+
+}
+.course-duration{
+    background-color: #ffc014;
+    color: #FF4A60;
+    padding-left: 20px;
+    Width: 94.83px;
+    /* height: 29.38px; */
+    border-radius: 15px;
+    opacity: 50%;      
+
+
+}
+/*--------------
+ Media quries
+  ------------*/
+@media only screen and (max-width:688px) {
+      .container{
+          width: 100%;
+      }
+      
+    
+       .players, .blogs, .courses{
+          
+        grid-template-columns: repeat(1, 1fr);
+         
+       }
+       .player, .blog{
+           flex-direction: column;
+       }
+}
+
+
+/* -----tablet devics------- */
+@media only screen and (min-width: 668px) and
+(max-width:992px) {
+    .container{ 
+        width: 100%;
+    }
+    .players, .courses{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .blogs{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}  
+
+
+
+
+    
+    
+
+    
+      
+  
